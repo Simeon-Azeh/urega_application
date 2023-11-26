@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <title>uregaapplication</title>
+    <link rel="stylesheet" href="style.css">
+    <scrip src="script.js" defer></script>
+</head>
+<body>
+    <form action="#" class="form">
+        <h1 class="text-center">Share a personal story about overcoming challenges and how it has shaped your educational journey.</h1>
+        <p>Your essay should be between 500 and 800 words.</p>
+        <div class="input-group">
+           <label for="prompt">Write your essay below</label>
+           <textarea id="textArea" placeholder="Start writing..." minlength="50" maxlength="2000"></textarea>
+           <div id="wordCount">Word Count: 0</div>
+        </div>
+            
+            <div class="btns-group">
+                <a href="essayin.html" class="btn btn-next"><i class="fa-solid fa-arrow-left"></i>Previous</a>
+            <a href="fileup.html" class="btn btn-next">Next<i class="fa-solid fa-arrow-right"></i></a>
+            <h5>Step 5/6</h5>
+            </div>
+        </div>
+    </form>
+    <script>
+        const textArea = document.getElementById('textArea');
+        const wordCountDisplay = document.getElementById('wordCount');
+
+        textArea.addEventListener('input', function() {
+            const words = textArea.value.match(/\b\w+\b/g);
+            const wordCount = words ? words.length : 0;
+            wordCountDisplay.textContent = 'Word Count: ' + wordCount;
+
+            // Check if word limit (e.g., 1000) is exceeded
+            if (wordCount > 800) {
+                wordCountDisplay.classList.add('exceeded');
+            } else {
+                wordCountDisplay.classList.remove('exceeded');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <title>uregaapplication</title>
+    <link rel="stylesheet" href="style.css">
+    <scrip src="script.js" defer></script>
+</head>
+<body>
+    <form action="#" class="form">
+        <h1 class="text-center">Parent information</h1>
+        <div class="form-step form-step-active">
+            <div class="form-step form-step-active">
+                <div class="input-group">
+                    <label for="firstname">Name of Parent/Guidant</label>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="e.g., 652812028" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="input-group">
+                    <label for="lastname">Which of the following describes your family unit?</label>
+                    <select name="level" id="level">
+                        <option value="level">Monogamy</option>
+                        <option value="level">Polygamous(More than one wife)</option>
+                    </select> 
+                </div>
+        
+                <div class="btns-group">
+                    <a href="startappl2.html" class="btn btn-next"><i class="fa-solid fa-arrow-left"></i>Previous</a>
+                    <a href="startappl4.html" class="btn btn-next">Next<i class="fa-solid fa-arrow-right"></i></a>
+                    <h5>Step 3/6</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </form>
+</body>
+</html>
